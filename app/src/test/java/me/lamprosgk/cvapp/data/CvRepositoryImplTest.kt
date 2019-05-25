@@ -17,7 +17,6 @@ import org.mockito.MockitoAnnotations
 import retrofit2.HttpException
 import org.mockito.Mockito.`when` as whenever
 
-
 class CvRepositoryImplTest {
 
     @Mock
@@ -50,7 +49,6 @@ class CvRepositoryImplTest {
         assert(onNextEmission.skills ==  skills)
 
         verify(cvService).getCv("lampros", "id", "myCv.json")
-
     }
 
     @Test
@@ -65,8 +63,5 @@ class CvRepositoryImplTest {
         observer.assertError(HttpException::class.java)
 
         verify(cvService).getCv("lampros", "id", "myCv.json")
-
     }
-
-
 }

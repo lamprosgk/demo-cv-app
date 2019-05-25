@@ -13,5 +13,4 @@ class TestRepositoryModule {
     @Provides
     @Singleton
     fun provideCvRepository(service: CvService): CvRepository = Mockito.mock(CvRepository::class.java)
-
 }

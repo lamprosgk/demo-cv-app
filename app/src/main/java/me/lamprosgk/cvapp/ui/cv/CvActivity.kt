@@ -1,19 +1,18 @@
 package me.lamprosgk.cvapp.ui.cv
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import me.lamprosgk.cvapp.CvApplication
 import me.lamprosgk.cvapp.R
-import me.lamprosgk.cvapp.ui.cv.adapter.RolesAdapter
 import me.lamprosgk.cvapp.model.Resume
+import me.lamprosgk.cvapp.ui.cv.adapter.RolesAdapter
 import me.lamprosgk.cvapp.util.gone
 import me.lamprosgk.cvapp.util.visible
 import javax.inject.Inject
 
 class CvActivity : AppCompatActivity(), CvContract.View {
-
 
     @Inject
     override lateinit var mPresenter: CvContract.Presenter
@@ -29,7 +28,6 @@ class CvActivity : AppCompatActivity(), CvContract.View {
         mPresenter.setView(this)
 
         loadCv()
-
     }
 
     private fun setupRecyclerView() {
@@ -66,8 +64,6 @@ class CvActivity : AppCompatActivity(), CvContract.View {
             emptyMessage.gone()
             resumeContainer.visible()
         }
-
-
     }
 
     override fun showError(error: Throwable) {

@@ -12,7 +12,6 @@ import me.lamprosgk.cvapp.model.WorkExperience
 
 class RolesAdapter : RecyclerView.Adapter<RolesAdapter.ViewHolder>() {
 
-
     private var roles: List<WorkExperience>? = null
 
     fun setItems(roles: List<WorkExperience>?) {
@@ -45,7 +44,6 @@ class RolesAdapter : RecyclerView.Adapter<RolesAdapter.ViewHolder>() {
                 roleCompany.text = context.getString(R.string.role_item_company, company.name, company.location)
                 roleTitle.text = role
                 roleDate.text = context.getString(R.string.role_item_date, period.from, period.to)
-
             }
         }
     }

@@ -52,5 +52,4 @@ class NetworkModule {
     @Singleton
     fun provideCvService(retrofit: Retrofit): CvService = retrofit.create(CvService::class.java)
 
-
 }

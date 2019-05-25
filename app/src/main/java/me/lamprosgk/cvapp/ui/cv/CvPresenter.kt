@@ -29,8 +29,6 @@ class CvPresenter @Inject constructor(private val CvRepository: CvRepository) :
                 {
                     view!!.showError(it)
                 })
-
-
     }
 
     override fun setView(view: CvContract.View) {
@@ -41,6 +39,4 @@ class CvPresenter @Inject constructor(private val CvRepository: CvRepository) :
         view = null
         subscription?.dispose()
     }
-
-
 }

@@ -9,12 +9,10 @@ import me.lamprosgk.cvapp.model.Resume
 interface CvContract {
 
     interface View : BaseView<Presenter> {
-
         fun showCv(cv: Resume)
     }
 
     interface Presenter : BasePresenter<View> {
-
         /**
          * Default arguments provided, but allows for any json gist which conforms to the same schema to be loaded
          */

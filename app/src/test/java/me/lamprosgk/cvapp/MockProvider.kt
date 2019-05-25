@@ -16,7 +16,6 @@ private val contactDetails = ContactDetails("lampros@mail.com", "0678956789")
 val skills = listOf("Java", "Kotlin", "RxJava", "Dagger")
 private const val summary = "Circus acrobat with 10 years experience."
 
-
 private val roles =
     listOf(WorkExperience(Company("London", "TheAmazingCompany"), Period("2015", "2019"), "Senior Engineer"))
 val resume = Resume(address, contactDetails, firstName, lastName, skills, summary, roles)
@@ -29,7 +28,12 @@ fun <T> any(): T {
 
 private fun <T> uninitialized(): T = null as T
 
-
 val errorObservable: Single<Resume> =
-    Single.error(HttpException(Response.error<Resume>(500,
-        ResponseBody.create(null, "Internal Server Error"))))
+    Single.error(
+        HttpException(
+            Response.error<Resume>(
+                500,
+                ResponseBody.create(null, "Internal Server Error")
+            )
+        )
+    )

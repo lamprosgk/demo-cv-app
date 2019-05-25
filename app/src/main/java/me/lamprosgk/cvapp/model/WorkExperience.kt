@@ -1,6 +1,5 @@
 package me.lamprosgk.cvapp.model
 
-
 import com.google.gson.annotations.SerializedName
 
 data class WorkExperience(
