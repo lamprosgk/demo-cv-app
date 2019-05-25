@@ -40,7 +40,6 @@ class CvActivityTest : BaseTest() {
     @Inject
     lateinit var cvRepository: CvRepository
 
-
     @Before
     fun setUp() {
 
@@ -134,14 +133,11 @@ class CvActivityTest : BaseTest() {
         onView(withId(R.id.emptyMessage)).check(matches(withText(R.string.message_error)))
     }
 
-
-
     private fun setMockRepositoryData(responseObservable: Single<Resume>) {
         // set response data and mimic network delay
         whenever(cvRepository.getCv(anyString(), anyString(), anyString()))
             .thenReturn(responseObservable.delay(NETWORK_DELAY_MS, TimeUnit.MILLISECONDS))
     }
-
 
     private fun launchActivityAndWaitForResponse() {
         activityRule.launchActivity(Intent())
