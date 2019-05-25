@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">myCV App</string>
+
+    <string name="label_name" tools:ignore="ExtraTranslation">Name</string>
+    <string name="label_contact_details">Contact Details</string>
+    <string name="label_summary">Summary</string>
+    <string name="label_experience">Work Experience</string>
+    <string name="label_skills">Skills</string>
+
+    <string name="cv_name">%1$s %2$s</string>
+    <string name="role_item_company">%1$s, %2$s</string>
+    <string name="role_item_date">%1$s - %2$s</string>
+    <string name="message_loading">Loading resume…</string>
+    <string name="message_error">An error occurred. Please swipe down to try again.</string>
+
+
+</resources>

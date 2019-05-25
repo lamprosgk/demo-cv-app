@@ -1,0 +1,67 @@
+{
+  "first_name": "Mock",
+  "last_name": "Tester",
+  "contact_details": {
+    "phone": "012345678910",
+    "email": "hi@johndoe.com"
+  },
+  "address": {
+    "street": "21 Fake Street",
+    "city": "London",
+    "post_code": "X1 2YZ"
+  },
+  "summary": "Android Developer with over 6 years’ experience in native development, building apps loved by millions. Agile enthusiast, passionate about the Android platform, UX and clean code.",
+  "work_experience": [
+    {
+      "role": "Software Engineer (Android)",
+      "company": {
+        "name": "KonanCake",
+        "location": "London"
+      },
+      "period": {
+        "from": "August 2015",
+        "to": "April 2019"
+      }
+    },
+    {
+      "role": "Software Engineer (Android)",
+      "company": {
+        "name": "Beam",
+        "location": "London"
+      },
+      "period": {
+        "from": "February 2015",
+        "to": "June 2015"
+      }
+    },
+    {
+      "role": "Software Engineer (Android)",
+      "company": {
+        "name": "Newzz",
+        "location": "London"
+      },
+      "period": {
+        "from": "June 2013",
+        "to": "December 2014"
+      }
+    },
+    {
+      "role": "Junior Software Engineer",
+      "company": {
+        "name": "Via",
+        "location": "London"
+      },
+      "period": {
+        "from": "September 2012",
+        "to": "April 2013"
+      }
+    }
+  ],
+  "skills": [
+    "Kotlin",
+    "Java",
+    "Android SDK",
+    "Testing",
+    "git"
+  ]
+}
