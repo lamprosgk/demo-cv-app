@@ -70,7 +70,6 @@ class CvActivityTest : BaseTest() {
         onView(withId(R.id.emptyMessage)).check(matches(not(isDisplayed())))
     }
 
-
     @Test
     fun testCorrectViewsAreVisibleOnSearchResult() {
 
@@ -88,7 +87,6 @@ class CvActivityTest : BaseTest() {
         onView(withId(R.id.experienceRecyclerView)).check(matches(isDisplayed()))
         onView(withId(R.id.label_skills)).check(matches(isDisplayed()))
         onView(withId(R.id.skills)).check(matches(isDisplayed()))
-
     }
 
     @Test
@@ -134,8 +132,6 @@ class CvActivityTest : BaseTest() {
         // error message visible
         onView(withId(R.id.emptyMessage)).check(matches(isDisplayed()))
         onView(withId(R.id.emptyMessage)).check(matches(withText(R.string.message_error)))
-
-
     }
 
 
@@ -144,7 +140,6 @@ class CvActivityTest : BaseTest() {
         // set response data and mimic network delay
         whenever(cvRepository.getCv(anyString(), anyString(), anyString()))
             .thenReturn(responseObservable.delay(NETWORK_DELAY_MS, TimeUnit.MILLISECONDS))
-
     }
 
 
@@ -152,7 +147,4 @@ class CvActivityTest : BaseTest() {
         activityRule.launchActivity(Intent())
         Thread.sleep(WAIT_FOR_NETWORK_CALL)
     }
-
-
-
 }
