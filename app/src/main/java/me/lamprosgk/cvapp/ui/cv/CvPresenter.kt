@@ -6,7 +6,7 @@ import io.reactivex.schedulers.Schedulers
 import me.lamprosgk.cvapp.data.CvRepository
 import javax.inject.Inject
 
-class CvPresenter @Inject constructor(private val CvRepository: CvRepository) :
+class CvPresenter @Inject constructor(private val cvRepository: CvRepository) :
     CvContract.Presenter {
 
     private var subscription: Disposable? = null
@@ -15,7 +15,7 @@ class CvPresenter @Inject constructor(private val CvRepository: CvRepository) :
     override fun getCv(username: String, gistId: String, filename: String) {
         checkNotNull(view)
 
-        subscription = CvRepository.getCv(username, gistId, filename)
+        subscription = cvRepository.getCv(username, gistId, filename)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnSubscribe { view!!.showLoading(true) }
